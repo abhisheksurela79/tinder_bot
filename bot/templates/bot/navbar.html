@@ -1,0 +1,21 @@
+{% load static %}
+<nav>
+    <div id="nav-container">
+        <div class="logo">
+            <img src="{% static "./bot/icons/tinder-logo.svg" %}" alt="Logo" draggable="false">
+            <p>Tinder-Bot</p>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a class="active" href="/login">Login</a></li>
+            <li><a href="/signup">Sign-up</a></li>
+            <li id="toggle-site-mode"><img src="{% static "./bot/icons/dark-mode.svg" %}" alt="dark-mode" title="dark-mode" draggable="false"></li>
+        </ul>
+    </div>
+
+    <div id="hamburger">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </div>
+</nav>

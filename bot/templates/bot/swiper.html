@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tinder-Bot | Dating, Make Friends & Meet New People</title>
+  <link rel="stylesheet" href="{% static "./bot/CSS/base.css" %}">
+  <link rel="stylesheet" href="{% static "./bot/CSS/navbar.css" %}">
+  <link rel="stylesheet" href="{% static "./bot/CSS/swiper.css" %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+</head>
+<body>
+  {% include './navbar.html' %}
+  <section id="container">
+    <aside id="left"></aside>
+    <main id="right">
+      {% comment %} <div class="main-box"> {% endcomment %}
+      <div class="main-box" style="transform: translateY(-100vh);">
+        <div>
+          <img
+            class="next-img"
+            src="{% static "./bot/icons/arrow.svg" %}"
+            alt="next-img"
+            draggable="false"
+          />
+          <img
+            class="prev-img hidden"
+            src="{% static "./bot/icons/arrow.svg" %}"
+            alt="prev-img"
+            draggable="false"
+          />
+        </div>
+        <div class="user-action-buttons">
+          <div class="rewind-user">
+            <img
+              src="{% static "./bot/icons/rewind-user.svg" %}"
+              alt="rewind-user"
+              draggable="false"
+            />
+          </div>
+          <div class="dislike-user">
+            <img
+              src="{% static "./bot/icons/dislike-user.svg" %}"
+              alt="dislike-user"
+              draggable="false"
+            />
+          </div>
+          <div class="like-user">
+            <img src="{% static "./bot/icons/like-user.svg" %}" alt="like-user" draggable="false" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="crush-wrapper">
+            <div class="crush-container">
+              <div class="crush-img-container">
+                <img
+                  class="crush-img"
+                  src="{% static "./bot/images/1.webp" %}"
+                  alt="crush-image"
+                  draggable="false"
+                />
+                <img
+                  class="crush-img"
+                  src="{% static "./bot/images/2.webp" %}"
+                  alt="crush-image"
+                  draggable="false"
+                />
+                <img
+                  class="crush-img"
+                  src="{% static "./bot/images/3.webp" %}"
+                  alt="crush-image"
+                  draggable="false"
+                />
+                <img
+                  class="crush-img"
+                  src="{% static "./bot/images/4.webp" %}"
+                  alt="crush-image"
+                  draggable="false"
+                />
+                <img
+                  class="crush-img"
+                  src="{% static "./bot/images/7.webp" %}"
+                  alt="crush-image"
+                  draggable="false"
+                />
+                <img
+                  class="crush-img"
+                  src="{% static "./bot/images/6.webp" %}"
+                  alt="crush-image"
+                  draggable="false"
+                />
+              </div>
+              <p class="crush-like-text">Like</p>
+              <p class="crush-dislike-text">Dislike</p>
+              <div class="crush-details-container">
+                <div class="crush-details">
+                  <h4>Neha Singh</h4>
+                  <p class="age">21</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      
+      <div class="main-box" id="crush-more-info-wrapper">
+        
+
+
+
+      </div>
+
+
+      
+    </main>
+  </section>
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+  <script src="{% static "./bot/JS/navbar.js" %}"></script>
+  <script src="{% static "./bot/JS/swiper-helper/reset-cards.js" %}" type="module"></script>
+  <script src="{% static "./bot/JS/swiper-helper/swipe.js" %}" type="module"></script>
+  <script src="{% static "./bot/JS/swiper-helper/image-gallery.js" %}" type="module"></script>
+  <script src="{% static "./bot/JS/swiper.js" %}" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinder-Bot | Login</title>
+    <link rel="stylesheet" href="{% static "./bot/CSS/base.css" %}">
+    <link rel="stylesheet" href="{% static "./bot/CSS/navbar.css" %}">
+    <link rel="stylesheet" href="{% static "./bot/CSS/login.css" %}">
+</head>
+<body>
+    {% include './navbar.html' %}
+    <section id="main">
+        <form action="" method="get" autocomplete="off">
+          <div id="login-form-head">
+            <img src="{% static "./bot/icons/tinder-logo.svg" %}" alt="Logo" draggable="false">
+            <p>Log into Tinder-Bot</p>
+          </div>
+
+          <div class="mb-1">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" autocomplete="off">
+          </div>  
+
+          <div class="mb-1">
+            <label for="password">Password</label>
+            <div id="input-password-container">
+              <input type="password" name="password" id="password" autocomplete="new-password">
+              <img src="{% static "./bot/icons/hide-password.svg" %}" alt="hide-password" title="hide-password" draggable="false">
+            </div>
+          </div>
+
+          <div class="forget-password-link">
+            <a href="/forget-password">forget password?</a>
+          </div>
+
+          <div class="mb-1">
+            <input type="button" value="Submit">
+          </div>
+
+          <div class="sign-up-link">
+            <p>don't have an account? <a href="/sign-up">sign-up</a></p>
+          </div>
+        </form>
+    </section>
+
+    <script src="{% static "./bot/JS/navbar.js" %}"></script>
+    <script src="{% static "./bot/JS/login.js" %}"></script>
+</body>
+</html>
